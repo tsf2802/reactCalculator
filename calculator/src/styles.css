@@ -1,0 +1,78 @@
+
+*, *::before, *::after{
+    box-sizing: border-box 
+
+    /* watch the tutorial on learn css box model in 8 minutes*/
+
+}
+
+body{
+    margin: 0;
+    background: linear-gradient(to right, #7cd3ff, #f3a6ff)
+}
+
+/* watch video on css box model*/
+.calculator-grid{
+    justify-content: center;
+    display: grid;
+    margin-top: 1rem;
+    grid-template-columns: repeat(4,6rem);
+    grid-template-rows: minmax(7rem,auto) repeat (5,6rem) ;
+    font-family: Chivo, sans-serif;
+    
+}
+.calculator-grid > button{
+    height: 5.5rem;
+    cursor: pointer;
+    font-size: 2rem;
+    font-weight: bold;
+    color: rgba(129, 87, 147, 0.878);
+    outline: none;
+    border: 3px solid rgba(234, 202, 234, 0.771);
+    background-color: rgba(189, 65, 255, 0.162);
+}
+
+.calculator-grid >:hover,
+.calculator-grid >:focus{
+    background-color: rgba(245, 228, 255, 0.9);
+}
+.span-two{
+    grid-column:span 2;
+}
+
+.output{
+    pointer-events: none;
+    border-bottom: 10px solid rgba(249, 188, 249, 0.6);
+    border-left: 15px solid rgba(249, 188, 249, 0.771);
+    border-right: 15px solid rgba(249, 188, 249, 0.771);
+    border-top: 15px solid rgba(249, 188, 249, 0.771);
+    grid-column: 1/-1;
+    background-color: rgba(229, 176, 237, 0.648);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: space-around;
+    padding: .75rem;
+    word-wrap: break-word;
+    word-break: break-all;
+}
+
+.output .previous-op{
+    font-weight: Bold;
+    color:rgba(60, 49, 65, 0.662);
+    font-size: 1.5rem;
+}
+.output .current-op{
+    font-weight: Bold;
+    color:rgba(60, 49, 65, 0.666);
+    font-size: 2.5rem;
+}
+.titlecss{
+    text-align: center;
+    margin-top: 3rem;
+    font-size: 3.4rem;
+    font-weight: bold;
+    font-family: Chivo, sans-serif;
+    color:rgba(60, 49, 65, 0.645)
+    /*npm install @fontsource/chivo, import "@fontsource/chivo"*/
+}
